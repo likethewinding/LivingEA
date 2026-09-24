@@ -12,6 +12,10 @@ The first instantiation of the LivingEA paradigm is **LivingDE**, developed base
 
 LivingEA introduces an **individual-level time-varying neural algorithm design paradigm**, where the mathematical model governing candidate generation is no longer fixed during optimization.
 
+<p align="center">
+  <img src="assets/Methodology.pdf" width="90%" alt="Methodology">
+</p>
+
 The main characteristics include:
 
 - **Individual-Level Algorithm Design**  
