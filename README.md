@@ -18,8 +18,6 @@ LivingEA introduces an **individual-level time-varying neural algorithm design p
   <img src="assets/Methodology.png" width="90%" alt="LivingEA Methodology">
 </p>
 
-[📄 View the full-resolution PDF](assets/Methodology.pdf)
-
 The main characteristics include:
 
 - **Individual-Level Algorithm Design**  
