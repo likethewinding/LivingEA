@@ -1,274 +1,150 @@
-<div align="center">
+# LivingEA: An Ever-Evolving Evolutionary Algorithm Paradigm via Individual-Level Time-Varying Neural Design
 
-LivingEA
+This repository provides the official implementation and experimental resources for **LivingEA**, an automated evolutionary algorithm design paradigm that enables evolutionary algorithms to evolve dynamically at the **individual level** throughout the optimization process.
 
-An Ever-Evolving Evolutionary Algorithm Paradigm
+> 📌 Unlike conventional evolutionary algorithms with fixed structures or population-level adaptation rules, **LivingEA treats algorithm design as a sequential parameter-control problem**. Each candidate solution is associated with an individual-specific and time-varying algorithm generator, allowing the candidate solutions and their corresponding algorithmic behaviors to evolve jointly during optimization.
 
-via Individual-Level Time-Varying Neural Design
+The first instantiation of the LivingEA paradigm is **LivingDE**, developed based on Differential Evolution (DE).
 
-<br>
+---
 
-Automated Algorithm Design · Learning to Optimize · Evolutionary Computation · Zero-Shot Generalization · Explainable AI
+## 🧬 Methodological Highlights
 
-<br>
+LivingEA introduces an **individual-level time-varying neural algorithm design paradigm**, where the mathematical model governing candidate generation is no longer fixed during optimization.
 
+The main characteristics include:
 
+- **Individual-Level Algorithm Design**  
+  Instead of applying one shared configuration to the entire population, LivingEA generates a specific algorithmic configuration for each individual at every iteration.
 
+- **Time-Varying Algorithm Structure**  
+  Algorithm parameters and operator decisions change dynamically according to the temporal search trajectory of each individual.
 
+- **Unified Algorithm Design Space**  
+  Continuous parameters and discrete operator decisions are mapped into a unified continuous representation, allowing automated algorithm design to be formulated as a generalized parameter-control problem.
 
-<br>
+- **Temporal Neural Algorithm Designers**  
+  Two heterogeneous sequence models, a **Temporal Convolutional Network (TCN)** and a **Time-Series Transformer (TS-Transformer)**, learn algorithm design policies from historical evolutionary trajectories.
 
-What if an evolutionary algorithm were no longer a fixed optimizer,
-but a living system whose search behavior evolves together with its solutions?
+- **Dynamic Designer Scheduling**  
+  A lightweight **Q-learning scheduler** dynamically coordinates the two neural designers during optimization.
 
-</div>
+- **Co-Evolution of Solutions and Their Generators**  
+  Candidate solutions influence future algorithm-design decisions through trajectory feedback, while the generated algorithms determine subsequent solution evolution.
 
-Overview
+---
 
-LivingEA introduces an evolutionary algorithm paradigm in which the algorithm itself evolves during optimization.
+## 🔬 LivingDE
 
-Instead of assigning a fixed algorithmic configuration to an entire population, LivingEA treats automated algorithm design as an individual-level, time-varying parameter-control process. Each candidate solution is associated with its own dynamically generated search behavior, allowing the solutions and their algorithm generators to co-evolve throughout the optimization process.
+LivingDE instantiates the LivingEA paradigm using Differential Evolution.
 
-The first instantiation of this paradigm is LivingDE, built on Differential Evolution.
+Its algorithm design space contains both continuous and discrete variables, including:
 
-Why LivingEA?
+- scaling factor \(F\),
+- crossover rate \(Cr\),
+- individual-selection strategies,
+- operands of difference vectors,
+- activation switches of differential components.
 
-Most existing evolutionary algorithms still operate under a relatively static design:
+The resulting DE is therefore not represented by a single static mutation strategy. Instead, its search behavior may vary across both **individuals** and **iterations**.
 
-one algorithm structure,
+---
 
-one population-level configuration,
+## 🌐 Zero-Shot Generalization
 
-manually specified adaptation rules, or
+The neural algorithm designers are trained only on **10-dimensional optimization problems**.
 
-coarse-grained switching among predefined strategies.
+Without retraining, the learned design policies are directly deployed to:
 
-LivingEA changes the design perspective:
+- unseen CEC benchmark functions,
+- unseen problem dimensions,
+- large-scale optimization problems up to **1000 dimensions**, and
+- real-world optimization problems.
 
-Conventional EA
+This setting is used to investigate whether algorithm-design knowledge learned from low-dimensional search trajectories can generalize to substantially different optimization scenarios.
 
-LivingEA
+---
 
-Static algorithm structure
+## 🔍 Explainability
 
-Time-varying algorithm behavior
+LivingEA incorporates a dual-view post-hoc explainability framework.
 
-Population-level configuration
+### SHAP-based Neural Decision Analysis
 
-Individual-level configuration
+SHAP is used to quantify how evolutionary trajectory features influence the algorithm-design decisions generated by the neural designers.
 
-Handcrafted adaptation
+The analyzed trajectory features include:
 
-Learned temporal design policy
+- relative fitness,
+- spatial proximity,
+- historical success rate.
 
-Fixed operator templates
+### Search Trajectory Network
 
-Continuously parameterized mixed design space
+Search Trajectory Networks (STNs) are used to visualize the resulting evolutionary search behaviors after the generated algorithmic decisions are executed.
 
-Solution evolution
+Together, these two perspectives provide complementary explanations of:
 
-Co-evolution of solutions and their generators
+1. **why** the neural designers generate particular algorithmic decisions, and  
+2. **how** these decisions affect the subsequent search process.
 
-Core Idea
+---
 
-<div align="center">
+## 🛠️ Code and Reproduction
 
-Search trajectory → Neural designer → Algorithm configuration → New solution → New trajectory
+The project repository is currently under preparation.
 
-</div>
+The complete reproducibility package will include:
 
-For individual (i) at iteration (t), LivingEA learns a time-dependent generator
+- LivingDE source code,
+- training code for the neural algorithm designers,
+- testing scripts,
+- benchmark configurations,
+- trained neural models,
+- experimental results,
+- and reproduction instructions.
 
-[
-\Theta_i^{(t)} = \mathcal{C}\left(H_i^{(t-1)}\right),
-]
+The source code will be released at a later stage.
 
-where (H_i^{(t-1)}) represents the historical search trajectory and (\mathcal{C}) denotes the learned algorithm designer.
+---
 
-The resulting configuration determines how the individual evolves at the current iteration.
+## 📊 Experimental Resources
 
-This creates a closed loop:
+The experimental evaluation includes:
 
-[
-\text{Solution trajectory}
-;\longleftrightarrow;
-\text{Algorithm evolution trajectory}.
-]
+- CEC benchmark problems,
+- cross-dimensional zero-shot evaluation,
+- large-scale global optimization,
+- real-world optimization tasks,
+- component-effectiveness analysis,
+- SHAP-based explainability analysis,
+- and Search Trajectory Network visualization.
 
-LivingDE
+Additional figures, numerical results, and supplementary materials will be added to this repository.
 
-LivingDE instantiates LivingEA through Differential Evolution.
+---
 
-Its design space jointly contains continuous and discrete algorithmic decisions, including:
+## 📄 Paper
 
-scaling factor (F),
+Our manuscript:
 
-crossover rate (Cr),
+**"LivingEA: An Ever-Evolving Evolutionary Algorithm Paradigm via Individual-Level Time-Varying Neural Design"**
 
-base-vector selection,
+is currently under revision for *IEEE Transactions on Evolutionary Computation*.
 
-difference-vector operands,
+Paper access: **Coming soon**
 
-activation of differential components.
+---
 
-Discrete decisions are mapped into a continuous preference space, allowing the complete mixed design problem to be handled by neural algorithm designers.
+## ⚠️ Notice
 
-Neural Algorithm Designers
+This repository is currently maintained as the official project page for LivingEA.
 
-LivingEA uses two heterogeneous non-recurrent temporal models:
+The complete source code and reproduction package have not yet been publicly released.  
+Please do not redistribute unpublished project materials without the authors' permission.
 
-Temporal Convolutional Network
+---
 
-The TCN emphasizes local temporal patterns in evolutionary trajectories and provides efficient sequence modeling.
+## 📖 Citation
 
-Time-Series Transformer
-
-The TS-Transformer captures longer-range dependencies and global temporal relationships.
-
-Q-Learning Scheduler
-
-A lightweight Q-learning scheduler dynamically coordinates the two designers during optimization.
-
-<div align="center">
-
-TCN + TS-Transformer + Q-learning
-
-Local temporal modeling · Global temporal modeling · Dynamic coordination
-
-</div>
-
-Zero-Shot Generalization
-
-A central objective of LivingEA is to learn scale-insensitive algorithm-design policies rather than problem-specific parameter schedules.
-
-The neural designers are trained on 10-dimensional optimization problems and directly deployed, without retraining, to:
-
-unseen CEC benchmark functions,
-
-higher-dimensional search spaces,
-
-large-scale problems up to 1000 dimensions,
-
-real-world optimization tasks.
-
-<div align="center">
-
-10D Training  →  Unseen Problems  →  30D / 50D / 100D / 1000D
-
-</div>
-
-Explainability
-
-LivingEA is interpreted from two complementary perspectives.
-
-Neural Decision View
-
-SHAP is used to analyze how trajectory features influence algorithm-design decisions.
-
-The current implementation studies features related to:
-
-relative fitness,
-
-spatial proximity,
-
-historical success rate.
-
-Search Behavior View
-
-Search Trajectory Networks (STNs) visualize how different neural decisions translate into search behavior over time.
-
-Together, the two views answer:
-
-Why does the neural designer make a particular decision?
-What search behavior emerges after that decision is executed?
-
-Framework
-
-The final framework figure will be added here.
-
-<p align="center">
-  <img src="assets/livingea-framework.png" width="92%" alt="LivingEA Framework">
-</p>
-
-Experimental Scope
-
-LivingEA / LivingDE is evaluated across multiple scenarios:
-
-Scenario
-
-Purpose
-
-CEC benchmarks
-
-General optimization performance
-
-Cross-dimensional testing
-
-Zero-shot scalability
-
-Large-scale optimization
-
-Generalization up to 1000D
-
-Real-world tasks
-
-Practical transferability
-
-SHAP analysis
-
-Neural decision interpretation
-
-STN analysis
-
-Search-behavior interpretation
-
-Repository Status
-
-🚧 This repository is currently being prepared for the LivingEA project.
-
-At the current revision stage, the repository primarily serves as the project homepage and organizational space.
-
-Planned release materials include:
-
-source code,
-
-training and testing scripts,
-
-trained neural designers,
-
-benchmark configurations,
-
-supplementary experimental results,
-
-reproduction instructions.
-
-The complete reproducibility package will be added in a later release.
-
-Repository Structure
-
-LivingEA/
-├── README.md
-├── assets/
-├── figures/
-├── supplementary/
-└── code/
-
-Paper
-
-LivingEA: An Ever-Evolving Evolutionary Algorithm Paradigm via Individual-Level Time-Varying Neural Design
-
-Manuscript currently under revision.
-
-Paper link: Coming soon
-
-Citation
-
-Citation information will be added after the final bibliographic record becomes available.
-
-<div align="center">
-
-LivingEA
-
-From evolving solutions to evolving algorithms.
-
-</div>
+Citation information will be provided after the final bibliographic record becomes available.
