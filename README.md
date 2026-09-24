@@ -12,11 +12,23 @@ The first instantiation of the LivingEA paradigm is **LivingDE**, developed base
 
 LivingEA introduces an **individual-level time-varying neural algorithm design paradigm**, where the mathematical model governing candidate generation is no longer fixed during optimization.
 
+### 🔄 Co-Evolution of Solutions and Their Generators
+
+<p align="center">
+  <img src="assets/Solutions_and_Generators_Coevolution.gif" width="90%" alt="Solutions and Generators Co-evolution">
+</p>
+
+This GIF illustrates the reciprocal co-evolutionary process between candidate solutions and the mathematical models governing their generation. Through this closed-loop interaction, the resulting algorithm ceases to be a static entity and instead resembles a dynamic, individual-specific living system that undergoes adaptive evolution in real time.
+
+### 🧩 Overall Methodology
+
 <p align="center">
   <img src="assets/Methodology.png" width="90%" alt="LivingEA Methodology">
 </p>
 
 The figure illustrates the main methodology of the LivingEA paradigm after AAD modeling. Neural designers are trained through a three-tier nested meta-training framework during the training phase and then deployed in a zero-shot manner under Q-learning-based scheduling to generate EAs for unseen problems during the testing phase.
+
+The main characteristics include:
 
 The main characteristics include:
 
