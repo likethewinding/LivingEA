@@ -1,6 +1,6 @@
 # LivingEA: An Ever-Evolving Evolutionary Algorithm Paradigm via Individual-Level Time-Varying Neural Design
 
-This repository provides the official implementation and experimental resources for **LivingEA**, an automated evolutionary algorithm design paradigm that enables evolutionary algorithms to evolve dynamically at the **individual level** throughout the optimization process.
+This repository provides the official implementation and experimental resources for **LivingEA**, an automated evolutionary algorithm design paradigm that enables evolutionary algorithms to evolve dynamically at the individual level throughout the optimization process.
 
 > 📌 Unlike conventional evolutionary algorithms with fixed structures or population-level adaptation rules, **LivingEA treats algorithm design as a sequential parameter-control problem**. Each candidate solution is associated with an individual-specific and time-varying algorithm generator, allowing the candidate solutions and their corresponding algorithmic behaviors to evolve jointly during optimization.
 
