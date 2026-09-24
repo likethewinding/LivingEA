@@ -94,34 +94,6 @@ Together, these two perspectives provide complementary explanations of:
 
 The project repository is currently under preparation.
 
-The complete reproducibility package will include:
-
-- LivingDE source code,
-- training code for the neural algorithm designers,
-- testing scripts,
-- benchmark configurations,
-- trained neural models,
-- experimental results,
-- and reproduction instructions.
-
-The source code will be released at a later stage.
-
----
-
-## 📊 Experimental Resources
-
-The experimental evaluation includes:
-
-- CEC benchmark problems,
-- cross-dimensional zero-shot evaluation,
-- large-scale global optimization,
-- real-world optimization tasks,
-- component-effectiveness analysis,
-- SHAP-based explainability analysis,
-- and Search Trajectory Network visualization.
-
-Additional figures, numerical results, and supplementary materials will be added to this repository.
-
 ---
 
 ## 📄 Paper
