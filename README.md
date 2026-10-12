@@ -1,6 +1,6 @@
 # LivingEA: An Ever-Evolving Evolutionary Algorithm Paradigm via Individual-Level Time-Varying Neural Design
 
-This repository provides the official implementation and experimental resources for **LivingEA**, an automated evolutionary algorithm design paradigm that enables evolutionary algorithms to evolve dynamically at the individual level throughout the optimization process.
+This repository provides the official implementation and experimental resources for **LivingEA**, an automated algorithm design (AAD) paradigm that enables evolutionary algorithms to evolve dynamically at the individual level throughout the optimization process.
 
 > 📌 Unlike conventional evolutionary algorithms with fixed structures or population-level adaptation rules, **LivingEA treats algorithm design as a sequential parameter-control problem**. Each candidate solution is associated with an individual-specific and time-varying algorithm generator, allowing the candidate solutions and their corresponding algorithmic behaviors to evolve jointly during optimization.
 
@@ -30,8 +30,6 @@ The figure illustrates the main methodology of the LivingEA paradigm after AAD m
 
 The main characteristics include:
 
-The main characteristics include:
-
 - **Individual-Level Algorithm Design**  
   Instead of applying one shared configuration to the entire population, LivingEA generates a specific algorithmic configuration for each individual at every iteration.
 
@@ -42,10 +40,10 @@ The main characteristics include:
   Continuous parameters and discrete operator decisions are mapped into a unified continuous representation, allowing automated algorithm design to be formulated as a generalized parameter-control problem.
 
 - **Temporal Neural Algorithm Designers**  
-  Two heterogeneous sequence models, a **Temporal Convolutional Network (TCN)** and a **Time-Series Transformer (TS-Transformer)**, learn algorithm design policies from historical evolutionary trajectories.
+  Two lightweight heterogeneous sequence models, a **Temporal Convolutional Network (TCN)** and a **Time-Series Transformer (TS-Transformer)**, learn algorithm design policies from historical evolutionary trajectories.
 
 - **Dynamic Designer Scheduling**  
-  A lightweight **Q-learning scheduler** dynamically coordinates the two neural designers during optimization.
+  A **Q-learning scheduler** dynamically coordinates the two neural designers during optimization.
 
 - **Co-Evolution of Solutions and Their Generators**  
   Candidate solutions influence future algorithm-design decisions through trajectory feedback, while the generated algorithms determine subsequent solution evolution.
@@ -110,7 +108,11 @@ Together, these two perspectives provide complementary explanations of:
 
 ## 🛠️ Code and Reproduction
 
-The project repository is currently under preparation.
+The complete runnable source code of **LivingEA/LivingDE** has been publicly released in this repository to facilitate reproducibility and further research.
+
+The repository provides the full implementation of the proposed method together with representative experimental settings and supporting materials. While not all test scenarios reported in the manuscript are included, the released code can be directly executed and extended to other benchmark and application settings.
+
+Additional documentation and supporting resources may be added in future updates.
 
 ---
 
@@ -128,9 +130,9 @@ Paper access: **Coming soon**
 
 ## ⚠️ Notice
 
-This repository is currently maintained as the official project page for LivingEA.
+This repository is maintained as the official project page and implementation repository for **LivingEA**.
 
-The complete source code and reproduction package have not yet been publicly released. Additional materials will be made available in future updates.
+The complete runnable source code of LivingEA/LivingDE is publicly available. Representative experimental settings and supporting materials are also provided, while not all test scenarios reported in the manuscript are included. Additional documentation and supporting resources may be added in future updates.
 
 ---
 
