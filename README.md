@@ -1,4 +1,5 @@
-<!--# LivingEA: An Ever-Evolving Evolutionary Algorithm Paradigm via Individual-Level Time-Varying Neural Design
+<!--
+# LivingEA: An Ever-Evolving Evolutionary Algorithm Paradigm via Individual-Level Time-Varying Neural Design
 
 This repository provides the official implementation for **LivingEA**, an automated algorithm design (AAD) paradigm that enables evolutionary algorithms to evolve dynamically at the individual level throughout the optimization process.
 
@@ -11,7 +12,7 @@ The first instantiation of the LivingEA paradigm is **LivingDE**, developed base
 ## 🧬 Methodological Highlights
 
 LivingEA introduces an **individual-level time-varying neural algorithm design paradigm**, where the mathematical model governing candidate generation is no longer fixed during optimization.
-
+-->
 ### 🔄 Co-Evolution of Solutions and Their Generators
 
 <p align="center">
@@ -28,6 +29,7 @@ This GIF illustrates the reciprocal co-evolutionary process between candidate so
 
 The figure illustrates the main methodology of the LivingEA paradigm after AAD modeling. Neural designers are trained through a three-tier nested meta-training framework during the training phase and then deployed in a zero-shot manner under Q-learning-based scheduling to generate EAs for unseen problems during the testing phase.
 
+<!--
 The main characteristics include:
 
 - **Individual-Level Algorithm Design**  
@@ -129,7 +131,7 @@ is currently under revision for *IEEE Transactions on Evolutionary Computation*.
 Paper access: **Coming soon**
 
 ---
-
+-->
 ## ⚠️ Notice
 
 This repository is currently provided solely for peer review, inspection, and reproducibility verification of the submitted manuscript.
