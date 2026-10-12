@@ -110,10 +110,6 @@ Together, these two perspectives provide complementary explanations of:
 
 The complete runnable source code of **LivingEA/LivingDE** has been publicly released in this repository to facilitate reproducibility and further research.
 
-The repository provides the full implementation of the proposed method together with representative experimental settings and supporting materials. While not all test scenarios reported in the manuscript are included, the released code can be directly executed and extended to other benchmark and application settings.
-
-Additional documentation and supporting resources may be added in future updates.
-
 ---
 
 ## 💻 Requirements
