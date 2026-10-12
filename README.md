@@ -132,9 +132,11 @@ Paper access: **Coming soon**
 
 ## ⚠️ Notice
 
-This repository is maintained as the official project page and implementation repository for **LivingEA**.
+This repository is currently provided solely for peer review, inspection, and reproducibility verification of the submitted manuscript.
 
-The complete runnable source code of LivingEA/LivingDE is publicly available. Representative experimental settings and supporting materials are also provided, while not all test scenarios reported in the manuscript are included. Additional documentation and supporting resources may be added in future updates.
+During the review stage, the source code, figures, and other materials in this repository are provided exclusively for evaluation of the manuscript. Unless explicit permission is granted by the authors, these materials may not be used for any other purpose, including redistribution, modification, derivative research, use as an experimental baseline in other publications, integration into other projects, or any commercial or non-commercial application.
+
+The repository and its usage policy will be updated after the manuscript is formally published.
 
 ---
 
