@@ -22,7 +22,7 @@ LivingEA introduces an **individual-level time-varying neural algorithm design p
 This GIF illustrates the reciprocal co-evolutionary process between candidate solutions and the mathematical models governing their generation. Through this closed-loop interaction, the resulting algorithm ceases to be a static entity and instead resembles a dynamic, individual-specific living system that undergoes adaptive evolution in real time.
 
 ### 🧩 Overall Methodology
--->
+
 <p align="center">
   <img src="assets/Methodology.png" width="90%" alt="LivingEA Methodology">
 </p>
