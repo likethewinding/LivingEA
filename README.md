@@ -116,6 +116,12 @@ Additional documentation and supporting resources may be added in future updates
 
 ---
 
+## 💻 Requirements
+
+The practical training time depends on both CPU performance and the number of available CPU cores, while the degree of parallelism also affects the actual RAM consumption.
+
+---
+
 ## 📄 Paper
 
 Our manuscript:
